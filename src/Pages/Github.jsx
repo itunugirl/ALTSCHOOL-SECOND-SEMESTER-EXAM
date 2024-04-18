@@ -1,10 +1,10 @@
 import React, { useState, useEffect } from "react";
 import Pagination from "../components/Pagination";
 import { USER_PER_PAGE } from "../components/USER_PER_PAGE";
-import Users from "../components/User";
+import Users from "../components/Users";
 
 function Github() {
-  const [portfolio, setPortFolio] = useState([]);
+  const [portfolio, setPortfolio] = useState([]);
   const [totalPages, setTotalPages] = useState(0);
   const [loading, setLoading] = useState(true);
   const [page, setPage] = useState(1);
@@ -22,7 +22,7 @@ function Github() {
     fetch("https://api.github.com/users/itunugirl/repos")
       .then((res) => res.json())
       .then((data) => {
-        setPortFolio(data);
+        setPortfolio(data);
         setTotalPages(Math.ceil(data.length / USER_PER_PAGE));
         setLoading(false);
       });

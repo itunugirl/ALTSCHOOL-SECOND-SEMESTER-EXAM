@@ -4,7 +4,7 @@ import { USER_PER_PAGE } from "./USER_PER_PAGE";
 
 const Users = ({ users, page, chooseRepo, scrollView, dynamicRoute }) => {
   const startIndex = (page - 1) * USER_PER_PAGE;
-  console.log(users)
+  console.log("texting texting", typeof users)
   const selectedUsers = users.slice(startIndex, startIndex + USER_PER_PAGE);
   
   return (

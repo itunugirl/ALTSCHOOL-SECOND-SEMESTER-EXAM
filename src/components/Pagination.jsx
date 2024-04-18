@@ -1,4 +1,6 @@
-function Pagination({
+import React from "react";
+
+export default function Pagination({
     totalPages,
     handleClick,
   
